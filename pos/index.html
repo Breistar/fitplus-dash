@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#09090b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Fit Plus · Sistema de ventas</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<section id="pantalla-login" class="login" hidden>
+  <div class="login-caja">
+    <div class="marca">Fit Plus</div>
+    <p class="marca-sub">Sistema de ventas · acceso del equipo</p>
+    <form id="form-login">
+      <label>Correo<input type="email" id="login-email" autocomplete="username" required></label>
+      <label>Contraseña<input type="password" id="login-pass" autocomplete="current-password" required></label>
+      <button class="btn btn-p btn-ancho" type="submit">Entrar</button>
+      <p id="login-error" class="error" hidden></p>
+    </form>
+    <p class="pie-marca">Operado por GROVA</p>
+  </div>
+</section>
+
+<div id="app" class="app" hidden>
+  <aside class="lateral">
+    <div class="marca">Fit Plus <small>Sistema de ventas</small></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="usuario">
+      <b id="u-nombre"></b><span id="u-rol"></span>
+      <button class="btn btn-chico btn-ancho" id="btn-salir">Salir</button>
+    </div>
+  </aside>
+  <main class="contenido">
+    <div class="cabecera-movil">
+      <span class="marca">Fit Plus</span>
+      <span class="chico suave" id="u-nombre-m"></span>
+    </div>
+    <div id="vista"></div>
+  </main>
+  <nav class="barra-inf" id="barra-inf"></nav>
+</div>
+
+<div id="hoja-raiz"></div>
+<div id="toast" class="toast" hidden></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
